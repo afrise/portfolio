@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <html lang="en">
@@ -43,6 +44,7 @@
             </div>
             <br><br><br>
             <div class = "jumbotron">
+                <!-- TODO: put this info into a JSON file -->
                 <h2>About</h2><a id="about"></a>
                 <br>
                 I am a software developer from Richmond, VA with a passion for building software to make life easier. I have a proven track record of working on projects ranging from 
@@ -125,30 +127,13 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script>
-            $("body").on("click", "[data-trigger-button]", function() {
-                if (window.matchMedia("(max-width: 767px)").matches) {
-                    var $this = $(this),
-                        cNavButton = $this.data("trigger-button");
-                    $(cNavButton).trigger('click');
-            }});
-
-            var projects = new Vue({
-                el: '#projects',
-                data: {
-                    projects: [ {name: 'meer', description: 'android application that sends your current GPS coordinates to a friend using the share api in the form of a google maps link', url: "meer", tech:["java"]},
-                                {name: 'libGps', description: 'android library written in kotlin to simplify getting gps info and permissions', url: "libGps", tech:["kotlin"]},
-                                {name: 'ArcadeRcs', description: 'remote interface for home arcede cabinets to choose game to launch at boot', url: 'ArcadeRcs', tech:["c#"]},
-                                {name: 'IIDXCon', description: 'arduino software to emulate specialized input hardware', url: "iidxcon", tech:["c++", "arduino"]},
-                                {name: 'BitPocket', description: 'generates bitcoin addresses then checks their balance.', url: "bitpocket", tech:["kotlin"]},
-                                {name: 'Foad Fighters 3D Shader', description: 'shader written for ReShade to convert from interlaced to Red/Cyan 3D', url: "road-fighters-3d-shader", tech:["ReShade"]},
-                                {name: 'TegraAutoSmash', description: 'homebrew utility for nintendo switch that automatically injects payload upon connection to pc', url: "tegraautosmash", tech:["c#"]}]
-                }
-            });
+            //hack to close the navbar when anchor is clicked
+            $("body").on("click", "[data-trigger-button]", function(){if (window.matchMedia("(max-width: 767px)").matches){
+                    var $this = $(this), cNavButton = $this.data("trigger-button");$(cNavButton).trigger('click');}});
             
-            var resume = new Vue({
-                el: '#resume-data'
-            });
-            $.getJSON('./resume.json', (data) =>{resume.data=data;});
+            //load up JSON data and create Vue objects
+			$.getJSON('./resume.json',   function(data){var resume   = new Vue({el: '#resume-data', data: data});})
+            $.getJSON('./projects.json', function(data){var projects = new Vue({el: '#projects',    data: data});})
         </script>
     </body>
 </html>
