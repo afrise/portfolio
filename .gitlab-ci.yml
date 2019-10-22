@@ -1,8 +1,8 @@
 deploy:
     script:
-        - rd /s /q c:\stage\portfolio
+        - rmdir /s /q c:\stage\portfolio
         - git clone --depth=1 git@gitlab.com:afrise/portfolio.git c:\stage\portfolio
-        - rd c:\inetpub\wwwroot\portfolio /s /q
+        - rmdir /s /q c:\inetpub\wwwroot\portfolio
         - xcopy c:\stage\portfolio\webroot c:\inetpub\wwwroot\portfolio /e /I
     only: 
     - master
