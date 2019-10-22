@@ -1,7 +1,7 @@
 deploy:
     script:
         - Remove-Item -LiteralPath "c:\stage\portfolio" -Force -Recurse
-        - git clone --depth=1 git@gitlab.com:afrise/portfolio.git c:\stage\portfolio
+        - git clone --depth=1 https://github.com/afrise/portfolio.git c:\stage\portfolio
         - Remove-Item -LiteralPath "c:\inetpub\wwwroot\portfolio" -Force -Recurse
         - xcopy c:\stage\portfolio\webroot c:\inetpub\wwwroot\portfolio /e /I
     only: 
