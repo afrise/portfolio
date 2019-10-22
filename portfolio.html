@@ -1,0 +1,154 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Allen Frise</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            :target {display: block;position: relative;top: -100px;}
+            .card {box-shadow: 5px 5px 5px #bbb2;border-color: #ccc; background-color:#ccc8}
+            .jumbotron {background-color:#eee4;backdrop-filter: blur(10px); border-radius:15px; box-shadow: 5px 5px 25px #0002}
+            .title {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 6vw; text-align: right; 
+                    padding:30px; text-shadow:8px 8px 10px #0002}
+            .subtitle {font-size:2vw}
+            a {color:#000b}
+            @media (max-width: 775px) {.card-columns {column-count: 1;}}
+            @media (min-width: 775px) {.card-columns {column-count: 2;}}
+            @media (min-width: 1200px) {.card-columns {column-count: 3;}}
+            body {background: url('img/bg.jpg');background-attachment: fixed;background-size: 100%; backdrop-filter: blur(5px)}
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-transparent">
+            <a class="navbar-brand" href="#">{a}</a>    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" id="toggler">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" data-trigger-button="#toggler" href="#about"    >About</a></li>
+                    <li class="nav-item"><a class="nav-link" data-trigger-button="#toggler" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" data-trigger-button="#toggler" href="#resume"   >Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" data-trigger-button="#toggler" href="#contact"  >Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <br><br><br>
+            <div class="title"><br>
+                Allen Frise<div class="subtitle">Software Developer</div>
+            </div>
+            <br><br><br>
+            <div class = "jumbotron">
+                <h2>About</h2><a id="about"></a>
+                <br>
+                I am a software developer from Richmond, VA with a passion for building software to make life easier. I have a proven track record of working on projects ranging from 
+                graphics shaders to microcontroller logic to high-impact fintech web applications. I am always looking to perfect my craft, and constantly have a few personal projects on 
+                the back burner. I have experice working both solo and on an Agile team, and can interface well with clients and coworkers alike.
+                <br><br>
+                Some technologies I have experience with:
+                <ul>
+                    <li>C# / .Net (Framework / Core)</li>
+                    <li>Java / Kotlin (Android / Desktop)</li>
+                    <li>JavaScript</li>
+                    <li>SQL (SQL Server / MySQL)</li>
+                    <li>HTML / CSS</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>Docker</li>
+                    <li>GitLab CI/CD</li>
+                    <li>Vue.js, knockout.js, Bootstrap, jQuery</li>
+                </ul>
+            </div>
+            <div class="jumbotron">
+                <h2 >Portfolio</h2><a id="portfolio"></a>
+                <br>
+                Below are listed some of the projects that are available on my github:
+                <br><br>
+                <div class="container" id="projects">
+                    <div class="card-columns" >
+                        <div class="card h-100" style="width: 18rem;" v-for="project in projects">        
+                            <div class="card-body">
+                                <h5 class="card-title">{{project.name}}</h5>
+                                <p class="card-text">{{project.description}}</p>
+                                <span class="badge" v-for="tech in project.tech">{{tech}}</span> 
+                            </div>
+                            <div class="card-footer text-center"><a v-bind:href="'http://github.com/afrise/'+project.url" class="btn btn-secondary">view on github</a></div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="jumbotron">
+                <h2>Resume</h2><a id="resume"></a><br>
+                <div id="resume-data">
+                    <h4>{{name}}</h4><br>
+                    <b><u>Summary:</u></b><br>
+                    {{summary}}<br><br><br>
+                    <b><u>Professional Skills:</u></b><br>
+                    <ul>
+                        <li v-for="skill in skills">{{skill}}</li>
+                    </ul><br>
+                    <b><u>Education:</u></b><br>
+                    <ul>
+                        <li v-for='education in educations'>
+                            <b>{{education.school}}</b><br>
+                            <i>{{education.major}} | {{education.tenure}}</i>
+                        </li>
+                    </ul><br>
+                    <b><u>Professional Experience:</u></b><br>
+                    <div v-for="experience in experiences">
+                        <b>{{experience.title}}</b><br>
+                        <i>{{experience.name}}</i><br>
+                        {{experience.location}} | {{experience.tenure}}<br>
+                        <ul>
+                            <li v-for="responsibility in experience.responsibilities">{{responsibility}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center"><a href="docs/Resume.pdf" class="btn btn-secondary">download PDF</a></div>
+            </div>
+            <div class="jumbotron">
+                <h2>Contact</h2><a id="contact"></a><br>
+                Email: <a href="mailto:afrise@gmail.com">afrise@gmail.com</a><br>
+                Linkedin: <a href="https:/linkedin.com/in/afrise">afrise</a>
+            </div>
+        </div>
+        <footer>
+            <div class="text-center">&copy; 2019 Allen Frise. Built using <a href="https://getbootstrap.com">Bootstrap</a> and <a href="https://vuejs.org">Vue.js</a></div>
+        </footer>
+        <br>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script>
+            $("body").on("click", "[data-trigger-button]", function() {
+                if (window.matchMedia("(max-width: 767px)").matches) {
+                    var $this = $(this),
+                        cNavButton = $this.data("trigger-button");
+                    $(cNavButton).trigger('click');
+            }});
+
+            var projects = new Vue({
+                el: '#projects',
+                data: {
+                    projects: [ {name: 'meer', description: 'android application that sends your current GPS coordinates to a friend using the share api in the form of a google maps link', url: "meer", tech:["java"]},
+                                {name: 'libGps', description: 'android library written in kotlin to simplify getting gps info and permissions', url: "libGps", tech:["kotlin"]},
+                                {name: 'ArcadeRcs', description: 'remote interface for home arcede cabinets to choose game to launch at boot', url: 'ArcadeRcs', tech:["c#"]},
+                                {name: 'IIDXCon', description: 'arduino software to emulate specialized input hardware', url: "iidxcon", tech:["c++", "arduino"]},
+                                {name: 'BitPocket', description: 'generates bitcoin addresses then checks their balance.', url: "bitpocket", tech:["kotlin"]},
+                                {name: 'Foad Fighters 3D Shader', description: 'shader written for ReShade to convert from interlaced to Red/Cyan 3D', url: "road-fighters-3d-shader", tech:["ReShade"]},
+                                {name: 'TegraAutoSmash', description: 'homebrew utility for nintendo switch that automatically injects payload upon connection to pc', url: "tegraautosmash", tech:["c#"]}]
+                }
+            });
+            
+            var resume = new Vue({
+                el: '#resume-data'
+            });
+            $.getJSON('./resume.json', (data) =>{resume.data=data;});
+        </script>
+    </body>
+</html>
