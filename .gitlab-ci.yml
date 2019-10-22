@@ -1,8 +1,8 @@
 deploy:
     script:
-        - rmdir /s /q c:\stage\portfolio
+        - Remove-Item -LiteralPath "c:\stage\portfolio" -Force -Recurse
         - git clone --depth=1 git@gitlab.com:afrise/portfolio.git c:\stage\portfolio
-        - rmdir /s /q c:\inetpub\wwwroot\portfolio
+        - Remove-Item -LiteralPath "c:\inetpub\wwwroot\portfolio" -Force -Recurse
         - xcopy c:\stage\portfolio\webroot c:\inetpub\wwwroot\portfolio /e /I
     only: 
     - master
