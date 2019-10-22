@@ -6,6 +6,7 @@
 		{"name": "IIDXCon", "description": "arduino software to emulate specialized input hardware", "url": "iidxcon", "tech":["c++", "arduino"]},
 		{"name": "BitPocket", "description": "generates bitcoin addresses then checks their balance.", "url": "bitpocket", "tech":["kotlin"]},
 		{"name": "Road Fighters 3D Shader", "description": "shader written for ReShade to convert from interlaced to Red/Cyan 3D", "url": "road-fighters-3d-shader", "tech":["ReShade"]},
-		{"name": "TegraAutoSmash", "description": "homebrew utility for nintendo switch that automatically injects payload upon connection to pc", "url": "tegraautosmash", "tech":["c#"]}
+		{"name": "TegraAutoSmash", "description": "homebrew utility for nintendo switch that automatically injects payload upon connection to pc", "url": "tegraautosmash", "tech":["c#"]},
+		{"name": "Portfolio", "description": "the site you're looking at right now!", "url": "portfolio", "tech": ["html", "css", "js"]}
 	]
 }
