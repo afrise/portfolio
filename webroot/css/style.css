@@ -18,12 +18,8 @@
     box-shadow: 5px 5px 25px #0002;
 }
 
-.jumbotron2 {
-    background-color: #eee4;
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    box-shadow: 5px 5px 25px #0002;
-    margin-bottom: 2rem;
+.jumbotron a {
+    color: lightgray
 }
 
 .title {
@@ -52,4 +48,9 @@ a {color:lightslategray}
 .btn-primary {
     background-color: slategray;
     border-color: darkslategray;
+}
+
+.btn-primary:hover {
+    background-color: darkslategray;
+    border-color: black
 }

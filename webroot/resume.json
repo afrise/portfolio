@@ -18,11 +18,21 @@
             "title": "Software Developer", 
             "location": "Richmond, VA",
             "tenure": "01/2018 - 06/2019", 
-            "responsibilities": ["one", "two"]},
+            "responsibilities": [
+                "lead developer on one of the most important products at the company", 
+                "involved in all stages of deployment",
+                "design and implement internal tooling and libraries",
+                "refactor legacy code adding transparency and maintainability",
+                "enhance user experience by streamlining user workflow"
+            ]},
         {"name": "Bow Wow Kittly, LLC", 
             "title": "Software Developer / Database Administrator", 
             "location": "Richmond, VA",
             "tenure": "04/2010 - 12/2017", 
-            "responsibilities": ["one", "two"]}
+            "responsibilities": [
+                "set up relational database to store client information", 
+                "designed secure, responsive web frontend to store client / billing information",
+                "maintained and improved software as business requirements evolved"
+            ]}
     ]
 }
