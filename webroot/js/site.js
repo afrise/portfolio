@@ -10,7 +10,7 @@ $.getJSON('./about.json',    function(data){var projects = new Vue({el: '#about-
 function GetPdf(){
     var pdf = new jsPDF("portrait", "mm", "letter");
     pdf.setFontSize(4);
-    pdf.fromHTML(document.getElementById("resume-data").innerHTML, 25, 15, {width: 160});
+    pdf.fromHTML(document.getElementById("resume-data").innerHTML, 20, 10, {width: 180});
     pdf.setTextColor(0,0,0);
     pdf.save('resume.pdf');
 }

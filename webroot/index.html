@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta property = "og:title" content="Allen Frise: Portfolio"/>
+        <meta property = "og:description" content="I am a software developer from Richmond, VA with a passion for building software to make life easier."/>
         <title>Allen Frise</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
@@ -32,7 +34,7 @@
                 <h2>About</h2><a id="about"></a><br>
                 {{about}}<br><br>
                 Some technologies I have experience with:
-                <ul><li v-for="technology in technologies">{{technology}}</li></ul>
+                <div v-for="technology in technologies">- {{technology}}</div><br>
             </div>
             <div class = "jumbotron">
                 <div class = "container container-fluid">
@@ -53,23 +55,24 @@
                 <div id="resume-data">
                     <h4>{{name}}</h4><br>
                     <b><u>Summary:</u></b><br>
-                    <p>{{summary}}</p>
+                    <p>{{summary}}</p><br>
                     <b><u>Professional Skills:</u></b>
-                    <p><ul><li v-for="skill in skills">{{skill}}</li></ul></p>
+                    <div v-for="skill in skills">- {{skill}}</div><br><br>
                     <b><u>Education:</u></b>
-                    <ul><li v-for='education in educations'>
-                            <b>{{education.school}}</b><br>
+                    <div v-for='education in educations'>
+                            {{education.school}}<br>
                             <i>{{education.major}} | {{education.tenure}}</i>
-                    </li></ul>
+                    </div><br><br>
                     <b><u>Professional Experience:</u></b>
                     <div v-for="experience in experiences">
-                        <b>{{experience.title}}</b><br>
+                        {{experience.title}}<br>
                         <i>{{experience.name}}</i><br>
-                        {{experience.location}} | {{experience.tenure}}
-                        <ul><li v-for="responsibility in experience.responsibilities">{{responsibility}}</li></ul>
+                        <span>{{experience.location}} | {{experience.tenure}}</span>
+                        <div v-for="responsibility in experience.responsibilities">- {{responsibility}}</div><br>
                     </div>
-                </div>
+                </div><br>
                 <div class="text-center"><a onclick="GetPdf()" class="btn btn-primary">download PDF</a></div>
+                <div class="text-center"><i>generated with <a href="https://parall.ax/products/jspdf">jsPDF</a></i></div>
             </div>
             <div class="jumbotron">
                 <h2>Contact</h2><a id="contact"></a><br>
