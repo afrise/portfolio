@@ -43,3 +43,13 @@
     .subtitle {font-size: 24pt}
 }
 
+body {
+    background: darkslategray;
+    color: white
+}
+a {color:lightslategray}
+
+.btn-primary {
+    background-color: slategray;
+    border-color: darkslategray;
+}
