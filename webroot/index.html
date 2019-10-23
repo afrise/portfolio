@@ -36,14 +36,14 @@
                 Some technologies I have experience with:
                 <ul><li v-for="technology in technologies">{{technology}}</li></ul>
             </div>
-            <div class="jumbotron clearfix">
+            <div class="jumbotron">
                 <h2 >Portfolio</h2><a id="portfolio"></a>
                 <br>
                 Below are listed some of the projects that are available on my github:
                 <br><br>
-                <div class="row" id="projects">
+                <div id="projects">
                     <div class="card-columns" >
-                        <div class="card" style="width: 18rem;" v-for="project in projects">        
+                        <div class="card"  v-for="project in projects">        
                             <div class="card-body">
                                 <h5 class="card-title">{{project.name}}</h5>
                                 <p class="card-text">{{project.description}}</p>
