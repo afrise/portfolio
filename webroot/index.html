@@ -34,17 +34,19 @@
                 Some technologies I have experience with:
                 <ul><li v-for="technology in technologies">{{technology}}</li></ul>
             </div>
-            <div class = "jumbotron" style="padding: 0">
-                <h2 >Portfolio</h2><a id="portfolio"></a><br>
-                Below are listed some of the projects that are available on my github:<br><br>
-                <div id="projects">
-                    <div class="card-columns" >
-                        <div class="card"  v-for="project in projects">        
-                            <div class="card-body"><h5 class="card-title">{{project.name}}</h5><p class="card-text">{{project.description}}</p><span class="badge" v-for="tech in project.tech">{{tech}}</span></div>
-                            <div class="card-footer text-center"><a v-bind:href="'http://github.com/afrise/'+project.url" class="btn btn-primary">view on github</a></div>
+            <div class = "jumbotron2">
+                <div style="padding: 2rem 4rem">
+                    <h2 >Portfolio</h2><a id="portfolio"></a><br>
+                    Below are listed some of the projects that are available on my github:<br><br>
+                    <div id="projects">
+                        <div class="card-columns" >
+                            <div class="card"  v-for="project in projects">        
+                                <div class="card-body"><h5 class="card-title">{{project.name}}</h5><p class="card-text">{{project.description}}</p><span class="badge" v-for="tech in project.tech">{{tech}}</span></div>
+                                <div class="card-footer text-center"><a v-bind:href="'http://github.com/afrise/'+project.url" class="btn btn-primary">view on github</a></div>
+                            </div>
                         </div>
-                    </div>
-                </div> 
+                    </div> 
+                </div>
             </div>
             <div class="jumbotron">
                 <h2>Resume</h2><a id="resume"></a><br>
