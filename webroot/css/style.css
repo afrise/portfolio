@@ -43,10 +43,3 @@
     .subtitle {font-size: 24pt}
 }
 
-body {
-    background: url('../img/bg.png');
-    background-attachment: fixed;
-    
-    backdrop-filter: blur(5px);
-    color: #fff7
-}

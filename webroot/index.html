@@ -57,17 +57,17 @@
                     <b><u>Professional Skills:</u></b>
                     <p><ul><li v-for="skill in skills">{{skill}}</li></ul></p>
                     <b><u>Education:</u></b>
-                    <p><ul><li v-for='education in educations'>
+                    <ul><li v-for='education in educations'>
                             <b>{{education.school}}</b><br>
                             <i>{{education.major}} | {{education.tenure}}</i>
-                    </li></ul></p>
+                    </li></ul>
                     <b><u>Professional Experience:</u></b>
-                    <p><div v-for="experience in experiences">
+                    <div v-for="experience in experiences">
                         <b>{{experience.title}}</b><br>
                         <i>{{experience.name}}</i><br>
-                        {{experience.location}} | {{experience.tenure}}<br>
+                        {{experience.location}} | {{experience.tenure}}
                         <ul><li v-for="responsibility in experience.responsibilities">{{responsibility}}</li></ul>
-                    </div></p>
+                    </div>
                 </div>
                 <div class="text-center"><a onclick="GetPdf()" class="btn btn-primary">download PDF</a></div>
             </div>
