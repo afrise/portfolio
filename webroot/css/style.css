@@ -20,11 +20,9 @@
 
 .jumbotron2 {
     background-color: #eee4;
-    backdrop-filter: blur(10px);
     border-radius: 15px;
-    box-shadow: 5px 5px 25px #0002;
-    padding: 4rem 2rem;
-    margin-bottom: 2rem;
+   
+ 
 }
 
 .title {
