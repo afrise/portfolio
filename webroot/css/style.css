@@ -18,15 +18,6 @@
     box-shadow: 5px 5px 25px #0002;
 }
 
-.jumbotron2 {
-    background-color: #eee4;
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    box-shadow: 5px 5px 25px #0002;
-    padding: 4rem 2rem;
-    
-}
-
 .title {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 6vw;
