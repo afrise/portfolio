@@ -57,13 +57,13 @@
                 <div id="resume-data">
                     <h4>{{name}}</h4><br><b><u>Summary:</u></b><br><p>{{summary}}</p><br>
                     <b><u>Professional Skills:</u></b>
-                    <div v-for="skill in skills"> &bull; {{skill}}</div><br><br>
+                    <ul v-for="skill in skills"> <li style='list-style-type: circle'>{{skill}}</li></ul><br><br>
                     <b><u>Education:</u></b>
                     <div v-for='education in educations'>{{education.school}}<br><i>{{education.major}} | {{education.tenure}}</i></div><br><br>
                     <b><u>Professional Experience:</u></b>
                     <div v-for="experience in experiences">
                         {{experience.title}}<br><i>{{experience.name}}</i><br><span>{{experience.location}} | {{experience.tenure}}</span>
-                        <div v-for="responsibility in experience.responsibilities"> &bull; {{responsibility}}</div><br>
+                        <ul v-for="responsibility in experience.responsibilities"> <li style='list-style-type: circle'> {{responsibility}}</li></ul><br>
                     </div>
                 </div><br>
                 <div class="text-center"><a onclick="GetPdf()" class="btn btn-primary">download PDF</a></div>
