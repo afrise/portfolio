@@ -11,7 +11,7 @@ $.getJSON('./json/contact.json',  function(data){var contact  = new Vue({el: '#c
 function GetPdf(){
     var pdf = new jsPDF("portrait", "mm", "letter");
     pdf.setFontSize(4);
-    pdf.fromHTML(document.getElementById("resume-data").innerHTML.replace(/�/g, ">"), 20, 10, {width: 180});
+    pdf.fromHTML(document.getElementById("resume-data").innerHTML.replace(/•/g, ">"), 20, 10, {width: 180});
     pdf.setTextColor(0,0,0);
     pdf.save('resume.pdf');
 }
