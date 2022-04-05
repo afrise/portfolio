@@ -1,3 +1,5 @@
+import Vue from 'vue'
+
 //hack to close the navbar when anchor is clicked
 $("body").on("click", "[data-trigger-button]", function(){if (window.matchMedia("(max-width: 767px)").matches){
     var $this = $(this), cNavButton = $this.data("trigger-button");$(cNavButton).trigger('click');}});
